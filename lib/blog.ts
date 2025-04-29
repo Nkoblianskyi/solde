@@ -252,70 +252,49 @@ export const blogPosts: BlogPost[] = [
     "relatedPosts": [3, 4, 6]
   },
   {
-    "id": 6,
-    "title": "5 razones para invertir en publicidad en transporte público",
-    "excerpt": "La publicidad en transporte público ofrece ventajas únicas para las marcas.",
-    "date": "25 de abril, 2025",
-    "imageUrl": "/car.jpg",
-    "slug": "razones-invertir-publicidad-transporte-publico",
-    "author": "Carlos Martínez",
-    "tags": ["Transporte público", "Publicidad móvil", "Estrategia de marketing"],
-    "contentJsx": [
-      {
-        "type": "p",
-        "text": "La publicidad en transporte público es una de las formas más efectivas de llegar a un público amplio y diverso."
-      },
-      {
-        "type": "h2",
-        "text": "1. Alcance masivo"
-      },
-      {
-        "type": "p",
-        "text": "Millones de personas utilizan el transporte público diariamente en grandes ciudades, lo que garantiza una exposición significativa para las marcas."
-      },
-      {
-        "type": "h2",
-        "text": "2. Segmentación geográfica"
-      },
-      {
-        "type": "p",
-        "text": "Permite elegir rutas específicas que atraviesen barrios donde se encuentra tu público objetivo, optimizando la inversión publicitaria."
-      },
-      {
-        "type": "h2",
-        "text": "3. Tiempo de exposición prolongado"
-      },
-      {
-        "type": "p",
-        "text": "Los pasajeros pasan varios minutos en el transporte público, proporcionando más tiempo para captar la atención con tus anuncios."
-      },
-      {
-        "type": "h2",
-        "text": "4. Relación calidad-precio excepcional"
-      },
-      {
-        "type": "p",
-        "text": "La publicidad en transporte público tiene un coste por impacto significativamente menor que otros medios tradicionales como la televisión o la radio."
-      },
-      {
-        "type": "h2",
-        "text": "5. Versatilidad de formatos"
-      },
-      {
-        "type": "p",
-        "text": "Desde vinilos exteriores hasta carteles interiores y pantallas digitales, el transporte público ofrece múltiples formatos para adaptarse a cualquier estrategia."
-      },
-      {
-        "type": "h2",
-        "text": "Conclusión"
-      },
-      {
-        "type": "p",
-        "text": "La publicidad en transporte público sigue siendo una opción efectiva y rentable para alcanzar un amplio público objetivo en el entorno urbano moderno."
-      }
+    id: 6,
+    title: "El arte de crear mensajes impactantes para publicidad exterior",
+    excerpt: "Aprende a diseñar mensajes concisos y efectivos que capturen la atención del público en movimiento.",
+    date: "5 de abril, 2025",
+    imageUrl: "/city-2.jpg",
+    slug: "arte-crear-mensajes-impactantes-publicidad-exterior",
+    author: "Daniel Torres",
+    tags: ["Diseño creativo", "Copywriting", "Impacto visual"],
+    contentJsx: [
+      { type: "p", text: "La publicidad exterior debe captar la atención en segundos, comunicar un mensaje claro y memorable, y destacar en un entorno saturado de estímulos. Crear mensajes efectivos para este medio requiere combinar diseño visual atractivo y copywriting estratégico." },
+      { type: "h2", text: "Los principios del mensaje efectivo en exterior" },
+      { type: "p", text: "Para lograr anuncios exitosos en publicidad exterior, es esencial seguir principios clave que optimicen su impacto y recordación." },
+      { type: "h3", text: "Simplicidad ante todo" },
+      { type: "p", text: "Menos es más: un mensaje debe ser comprensible en menos de 5 segundos, evitando la sobrecarga visual o textual." },
+      { type: "h3", text: "Jerarquía visual clara" },
+      { type: "p", text: "Dirige la atención del espectador empezando por el elemento visual más llamativo, seguido del titular principal y, en último lugar, la información complementaria." },
+      { type: "h3", text: "Contraste y legibilidad" },
+      { type: "p", text: "El uso de colores contrastantes y tipografías sans-serif favorece una mejor lectura a distancia o en movimiento." },
+      { type: "h3", text: "Relevancia contextual" },
+      { type: "p", text: "Adaptar el mensaje al lugar, hora o condiciones climáticas potencia la conexión emocional y la efectividad del anuncio." },
+      { type: "h2", text: "Técnicas creativas de alto impacto" },
+      { type: "p", text: "Incorporar creatividad innovadora puede elevar significativamente el atractivo y la recordación de tu publicidad exterior." },
+      { type: "h3", text: "Extensión del espacio" },
+      { type: "p", text: "Diseñar elementos que parezcan romper los límites físicos del soporte genera un fuerte impacto visual inmediato." },
+      { type: "h3", text: "Interacción con el entorno" },
+      { type: "p", text: "Integrar el diseño publicitario con elementos urbanos como edificios, árboles o postes convierte el anuncio en parte del paisaje de forma memorable." },
+      { type: "h3", text: "Secuencialidad" },
+      { type: "p", text: "Desarrollar campañas que cuenten una historia a través de varios anuncios sucesivos en un recorrido incrementa la expectación y la atención del público." },
+      { type: "h3", text: "Ilusiones ópticas" },
+      { type: "p", text: "Aplicar efectos 3D o ilusiones visuales da dinamismo a soportes estáticos, captando el interés de manera instantánea." },
+      { type: "h2", text: "El poder del copywriting en exterior" },
+      { type: "ul", items: [
+        "Conciso: usa titulares de máximo 7 palabras.",
+        "Memorable: utiliza rimas, aliteraciones o juegos de palabras.",
+        "Intrigante: plantea una pregunta o afirmación curiosa.",
+        "Accionable: incluye un call-to-action claro y directo."
+      ]},
+      { type: "h2", text: "Conclusión" },
+      { type: "p", text: "El éxito en la publicidad exterior radica en equilibrar creatividad visual y simplicidad del mensaje. Un anuncio eficaz debe captar atención en segundos, ser memorable y dejar una impresión duradera en el público objetivo." }
     ],
-    "relatedPosts": [1, 3, 4]
-  },  
+    relatedPosts: [1, 2, 5] 
+  }
+  ,  
 ]
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
