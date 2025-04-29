@@ -34,7 +34,8 @@ export default function BlogPostPage({ params }: Props) {
     notFound()
   }
 
-  const relatedPosts = getRelatedPosts(post.id)
+  // !!! Важливо: беремо тільки існуючі пов'язані пости
+  const relatedPosts = getRelatedPosts(post.id).filter(Boolean)
 
   return (
     <>
@@ -67,11 +68,16 @@ export default function BlogPostPage({ params }: Props) {
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <div className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
-              <Image src={post.imageUrl || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
+              <Image
+                src={post.imageUrl || "/placeholder.svg"}
+                alt={post.title}
+                fill
+                className="object-cover"
+              />
             </div>
 
             <article>
-              <BlogContent content={post.content} />
+              <BlogContent contentJsx={post.contentJsx} />
             </article>
 
             {relatedPosts.length > 0 && (
@@ -79,7 +85,7 @@ export default function BlogPostPage({ params }: Props) {
                 <h3 className="text-xl font-bold mb-6">Artículos relacionados</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {relatedPosts.map((relatedPost) => (
-                    <Card key={relatedPost.id} className="flex flex-col h-full">
+                    <Card key={`${relatedPost.id}-${relatedPost.slug}`} className="flex flex-col h-full">
                       <div className="relative h-[150px]">
                         <Image
                           src={relatedPost.imageUrl || "/placeholder.svg"}
@@ -89,7 +95,9 @@ export default function BlogPostPage({ params }: Props) {
                         />
                       </div>
                       <CardHeader className="py-4">
-                        <CardTitle className="text-base line-clamp-2">{relatedPost.title}</CardTitle>
+                        <CardTitle className="text-base line-clamp-2">
+                          {relatedPost.title}
+                        </CardTitle>
                       </CardHeader>
                       <CardFooter className="pt-0">
                         <Button asChild variant="outline" className="w-full" size="sm">
@@ -105,8 +113,7 @@ export default function BlogPostPage({ params }: Props) {
             <div className="mt-12 pt-8 border-t">
               <h3 className="text-xl font-bold mb-4">¿Te ha resultado útil este artículo?</h3>
               <p className="mb-6">
-                Si estás interesado en implementar estrategias de publicidad exterior para tu marca, no dudes en
-                contactarnos.
+                Si estás interesado en implementar estrategias de publicidad exterior para tu marca, no dudes en contactarnos.
               </p>
               <Button asChild>
                 <Link href="/contacto">Solicitar información</Link>

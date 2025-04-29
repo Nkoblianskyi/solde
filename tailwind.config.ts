@@ -24,12 +24,12 @@ const config: Config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#FF5722",
-          foreground: "#FFFFFF",
+          DEFAULT: "rgba(120, 146, 278, 1)",
+          foreground: "#F9F9F9",
         },
         secondary: {
-          DEFAULT: "#2B3A67",
-          foreground: "#FFFFFF",
+          DEFAULT: "#282939;",
+          foreground: "#F9F9F9",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

@@ -1,14 +1,14 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Inter } from "next/font/google"
+import { Lora } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { CookieConsent } from "@/components/cookie-consent"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Lora({ subsets: ["latin"] })
 
 export default function RootLayout({
   children,

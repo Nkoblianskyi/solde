@@ -12,23 +12,25 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const service = getServiceById(params.id)
+  const { id } = await params
+  const service = await getServiceById(id)
 
   if (!service) {
     return {
       title: "Servicio no encontrado - Sol de Publicidad",
-      description: "El servicio que buscas no existe o ha sido movido.",
+      description: "Este servicio no existe o ha sido removido.",
     }
   }
 
   return {
     title: `${service.title} - Sol de Publicidad`,
-    description: service.content,
+    description: service.description,
   }
 }
 
-export default function ServicePage({ params }: Props) {
-  const service = getServiceById(params.id)
+export default async function ServicePage(props: Props) {
+  const { id } = await props.params
+  const service = await getServiceById(id)
 
   if (!service) {
     notFound()
